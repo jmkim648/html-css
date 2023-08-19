@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        body {
+            background-color: #111;
+            padding: 20px;
+            color: white;
+            font-size: 125%;
+        }
+
+        pre {
+            width: 80ch;
+            font-family: monospace;
+            font-size: 30px;
+            line-height: 30px;
+            /*
+            어째서 background를 설정하는데 글씨 색이??
+            -> https://developer.mozilla.org/ko/docs/Web/CSS/background-clip
+            -> background-clip: text로 배경을 text모양으로 clip
+            linear-gradient 이거 이렇게 복잡하게 한 이유는.....? 덮어씌우는건가? 다른 예제 등에서는 간단히 linear-gradient 한번으로 끝냄
+            ch -> px와 같은 단위로, 아마도..monospace폰트의 n너비값을 뜻함?
+            */
+            background:
+            linear-gradient(to right, white 0ch, #78dce8 0ch, #78dce8 3ch, white 3ch, white 18ch, #FFD658 18ch, #FFD658 31ch, white 31ch, white 80ch),
+            linear-gradient(to right, white 0ch, #a6e22e 0ch, #a6e22e 3ch, white 3ch, white 12ch, #f92672 12ch, #f92672 15ch, #A7C 15ch, #A7C 17ch, white 17ch, white 80ch),
+            linear-gradient(to right, white 0ch, white 0ch, white 4ch, #fd971f 4ch, #fd971f 11ch, white 11ch, white 12ch, #a6e22e 12ch, #a6e22e 15ch, white 15ch, white 16ch, #FFD658 16ch, #FFD658 34ch, #f92672 34ch, #f92672 37ch, white 37ch, white 80ch),
+            linear-gradient(to right, white 0ch, white 0ch, white 80ch),
+            linear-gradient(to right, white 0ch, white 0ch, white 80ch);
+            background-repeat: no-repeat;
+            background-size: 80ch 30px, 80ch 60px, 80ch 90px, 80ch 120px, 80ch 150px;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- pre 태그 내부의 텍스트는 사용된 여백, 줄바꿈이 모두 그대로 브라우저 화면에 나타남
+         독특한 서식의 텍스트나 코드 등을 그대로 표현 가능 -->
+    <pre>
+        let thisContent = 'highlighted';
+        for(x = 0; x < 10; x++){
+            console.log('loopy loopy loop' + x);
+        }
+    </pre>
+
+
+</body>
+
+</html>
