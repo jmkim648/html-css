@@ -1,0 +1,38 @@
+.view-main {
+    width: 800px;
+    margin: auto;
+    border-bottom: 1px solid #ddd;
+}
+.view-header {
+    background-color: #eee;
+    border-top: 2px solid black;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+.view-header-info {
+    display: flex;
+    margin-top: 5px;
+}
+.view-header-info>p:not(:first-child)::before {
+    content:'|';
+    color: #ccc;
+    margin: 0 15px;
+}
+
+.view-contents {
+    padding: 15px;
+}
+
+.view-contents h4{
+    margin: 30px 0 10px;
+}
+
+.view-contents ol,
+.view-contents ul {
+    list-style-position: inside;
+    line-height: 1.8;
+}
+
+.view-contents ol {
+    margin-bottom: 20px;
+}
