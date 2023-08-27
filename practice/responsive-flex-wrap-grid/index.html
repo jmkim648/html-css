@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        /* bgcolor 변수 사용 */
+        /* citation */
+        :root {
+            --bg-color: #ddd;
+            --p-color: #333;
+            --a-color: Teal;
+            --a-hover-color: LightSeaGreen;
+            --citation-bg-color: #1E0519;
+            --citation-p-color: Salmon;
+            --citation-a-color: MediumVioletRed;
+            --citation-a-hover-color: DeepPink;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        /* before after 가상자 */
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        * {
+            font-family: monaco, courier;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-color);
+        }
+
+        .container {
+            width: 90%;
+            overflow: hidden;
+            border-top: 1px solid black;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            flex-flow: row wrap;
+            justify-content: center;
+            margin: 0 -1px 0 0;
+            padding: 0;
+            list-style: none;
+            background-color: yellow;
+        }
+
+        li {
+            flex-grow: 1;
+            padding: 10px 40px;
+            text-align: center;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            background-color: white;
+
+            &:hover {
+                background: #eee;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- https://codepen.io/danielboggs/pen/bGOVeGo -->
+
+    <main class="wrapper">
+        <div class="container">
+            <ul>
+                <li>Lorem ipsum dolor</li>
+                <li> sit amet consectetur adipisicing elit.</li>
+                <li>Harum, placeat modi vero ab recusandae quis</li>
+                <li>impedit quibusdam!</li>
+                <li>Illum a, cumque itaque quam,</li>
+                <li>reprehenderit,</li>
+                <li>dignissimos veritatis</li>
+                <li>alias dolor consequatur vitae labore.</li>
+            </ul>
+        </div>
+    </main>
+
+</body>
+
+</html>
